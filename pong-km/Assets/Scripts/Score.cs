@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
     private int scoreL = 0;
     private int scoreR = 0;
     public int scoreEnding = 5;
@@ -31,6 +33,7 @@ public class Score : MonoBehaviour
         }
 
         Debug.Log("Score Left: " + scoreL + " Score Right: " + scoreR);
+        scoreText.text = $"{scoreL} - {scoreR}";
         return scoreL == scoreEnding || scoreR == scoreEnding;
     }
 
@@ -41,7 +44,9 @@ public class Score : MonoBehaviour
         Debug.Log("Game Over");
         Debug.Log(scoreR > scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!");
 
-        scoreR = 0;
+        scoreText.text =
+            $"{(scoreR > scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!")}\n Final Score: {scoreL} - {scoreR}";
+            scoreR = 0;
         scoreL = 0;
         
         //To removed later for replay 
