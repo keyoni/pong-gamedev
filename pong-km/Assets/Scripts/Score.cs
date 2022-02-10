@@ -24,16 +24,19 @@ public class Score : MonoBehaviour
         if (leftGoal)
         {
             scoreR++;
-            Debug.Log("Right Scores!");
+            Debug.Log("Right Scores!");  
+            scoreText.color = Color.red;
         }
         else
         {
             scoreL++;
             Debug.Log("Left Scores!");
+            scoreText.color = Color.blue;
         }
 
         Debug.Log("Score Left: " + scoreL + " Score Right: " + scoreR);
         scoreText.text = $"{scoreL} - {scoreR}";
+      
         return scoreL == scoreEnding || scoreR == scoreEnding;
     }
 
