@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PaddleMovement : MonoBehaviour
 {
-    private Rigidbody rb;
+    private Rigidbody _rb;
     public float speed = 10f;
     public int paddleId;
     
@@ -13,7 +13,7 @@ public class PaddleMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
@@ -33,6 +33,6 @@ public class PaddleMovement : MonoBehaviour
         Vector3 movement = new Vector3(0, 0,yInput);
         
         //Add Force Needs a vector3 variable 
-        rb.velocity = movement * speed * Time.deltaTime;
+        _rb.velocity = movement * speed * Time.deltaTime;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,9 +7,17 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    private int scoreL = 0;
-    private int scoreR = 0;
+    private int _scoreL = 0;
+    private int _scoreR = 0;
     public int scoreEnding = 5;
+    public TextMeshProUGUI restartText;
+
+
+    private void Start()
+    {
+        restartText.gameObject.SetActive(false);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.tag.Contains("Goal")) return;
@@ -23,37 +32,39 @@ public class Score : MonoBehaviour
     {
         if (leftGoal)
         {
-            scoreR++;
+            _scoreR++;
             Debug.Log("Right Scores!");  
             scoreText.color = Color.red;
         }
         else
         {
-            scoreL++;
+            _scoreL++;
             Debug.Log("Left Scores!");
             scoreText.color = Color.blue;
         }
 
-        Debug.Log("Score Left: " + scoreL + " Score Right: " + scoreR);
-        scoreText.text = $"{scoreL} - {scoreR}";
+        Debug.Log("Score Left: " + _scoreL + " Score Right: " + _scoreR);
+        scoreText.text = $"{_scoreL} - {_scoreR}";
       
-        return scoreL == scoreEnding || scoreR == scoreEnding;
+        return _scoreL == scoreEnding || _scoreR == scoreEnding;
     }
 
     private void GameOver()
     {
         
-        Debug.Log("Score Left: " + scoreL + " Score Right: " + scoreR);
+        Debug.Log("Score Left: " + _scoreL + " Score Right: " + _scoreR);
         Debug.Log("Game Over");
-        Debug.Log(scoreR > scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!");
+        Debug.Log(_scoreR > _scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!");
 
         scoreText.text =
-            $"{(scoreR > scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!")}\n Final Score: {scoreL} - {scoreR}";
-            scoreR = 0;
-        scoreL = 0;
+            $"{(_scoreR > _scoreL ? "Right Paddle Wins!" : "Left Paddle Wins!")}\n Final Score: {_scoreL} - {_scoreR}";
+            _scoreR = 0;
+        _scoreL = 0;
         
+        restartText.gameObject.SetActive(true);
         //To removed later for replay 
-        Destroy(gameObject);
+        Destroy(this.gameObject);
+        
     }
 }
 

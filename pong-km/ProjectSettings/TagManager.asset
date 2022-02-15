@@ -8,6 +8,10 @@ TagManager:
   - Goal
   - Paddle
   - Wall
+  - Ball
+  - PickUp
+  - PickUpSpawner
+  - PickUpBad
   layers:
   - Default
   - TransparentFX

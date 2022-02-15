@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637794435670270077
-    m_Hash: 416000670
+      ticks: 637803118794582969
+    m_Hash: 3814837636
   m_LockFileStatus:
     m_FilePath: C:/Users/xxaur/dev/spring2022/cst326/pong1/pong-gamedev/pong-km/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637794435957634930
-    m_Hash: 4090782298
+      ticks: 637803118848666678
+    m_Hash: 1567962709
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: C:/Users/xxaur/dev/spring2022/cst326/pong1/pong-gamedev/pong-km/Packages
-m_EditorVersion: 2021.2.10f1 (ee872746220e)
+m_EditorVersion: 2021.2.11f1 (e50cafbb4399)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@1.15.7
   testable: 0
@@ -197,7 +197,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.ide.visualstudio
-    version: 2.0.12
+    version: 2.0.14
   - name: com.unity.test-framework
     version: 1.1.29
   - name: com.unity.ext.nunit
@@ -321,12 +321,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.9
     nextVersion: 
-- packageId: com.unity.ide.visualstudio@2.0.12
+- packageId: com.unity.ide.visualstudio@2.0.14
   testable: 0
   isDirectDependency: 1
-  version: 2.0.12
+  version: 2.0.14
   source: 1
-  resolvedPath: C:\Users\xxaur\dev\spring2022\cst326\pong1\pong-gamedev\pong-km\Library\PackageCache\com.unity.ide.visualstudio@2.0.12
+  resolvedPath: C:\Users\xxaur\dev\spring2022\cst326\pong1\pong-gamedev\pong-km\Library\PackageCache\com.unity.ide.visualstudio@2.0.14
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -361,7 +361,6 @@ m_ResolvedPackages:
     - 2.0.12
     - 2.0.14
     compatible:
-    - 2.0.12
     - 2.0.14
     verified: 2.0.14
   dependencies:
@@ -386,16 +385,16 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637720564750000000
+  datePublishedTicks: 637782923640000000
   documentationUrl: 
-  hasRepository: 1
+  hasRepository: 0
   repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: 8d436ff053b9c59677b5e9799208143553cd02d9
+    type: 
+    url: 
+    revision: 
     path: 
   unityLifecycle:
-    version: 2.0.12
+    version: 2.0.14
     nextVersion: 
 - packageId: com.unity.ide.vscode@1.2.4
   testable: 0
