@@ -10,7 +10,7 @@ public class CamControl : MonoBehaviour
     public Camera rightCam;
     public Camera leftCam;
     public Camera ballCam;
-    private AudioListener full;
+    private AudioListener _full;
 
     void Start() {
         fullCam.enabled = true;

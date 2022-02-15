@@ -9,7 +9,7 @@ public class BallCam : MonoBehaviour
     public GameObject ball;
 
     //To get camera offset from player
-    private Vector3 offset;
+    private Vector3 _offset;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class BallCam : MonoBehaviour
         if (ball != null)
         {
             // camera transfrom postion - player tranform position
-            offset = transform.position - ball.transform.position;
+            _offset = transform.position - ball.transform.position;
         }
     }
 
@@ -27,7 +27,7 @@ public class BallCam : MonoBehaviour
         if (ball != null)
         {
             // aligns the camera to where the player is, but not the rotation so that's why it's not a child
-            transform.position = ball.transform.position + offset;
+            transform.position = ball.transform.position + _offset;
         }
     }
 }

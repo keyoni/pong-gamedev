@@ -12,6 +12,7 @@ public class NoiseHit : MonoBehaviour
 
     private float _pitchHigh = 2f;
     private float _pitchLow =  1f;
+    private float _currentPitch = 1f;
     
 
     public AudioClip sound;
@@ -29,8 +30,12 @@ public class NoiseHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        float ran = Random.Range(_pitchLow, _pitchHigh);
-        source.pitch = ran;
+        _currentPitch += 0.4f;
+        if (_currentPitch > _pitchHigh)
+        {
+            _currentPitch = _pitchLow;
+        }
+        source.pitch = _currentPitch;
         source.PlayOneShot(sound);
     
     }
